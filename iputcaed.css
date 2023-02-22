@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.flex{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+body{
+  padding-top:80px;
+  width:100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-image:linear-gradient(45deg,deepskyblue,white);
+}
+::-webkit-scrollbar{
+  width:0px;
+}
+::-webkit-scrollbar-thumb{
+  
+}
+.main {
+  position:relative;
+  width:450px;
+  background-color:white;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding:12px;
+  box-shadow: 0 0 8px rgb(0,0,0,0.4);
+}
+.card{
+  position:relative;
+  width:98%;
+  min-width:300px;
+  box-shadow: 0 0 30px rgb(0,0,0,0.4);
+  padding:10px;
+  transform:translateY(-50px);
+  background-image:linear-gradient(rgba(6, 101, 142, 0.65),rgba(180, 124, 4, 0.65)), url(3357684.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius:20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition:0.5s;
+  margin-bottom:-35px;
+}
+.card1{
+  position:relative;
+  width:100%;
+  height:100%;
+  opacity:1;
+  transition:0.5s;
+  backface-visibility:hidden;
+  z-index:0;
+}
+.card .imgs{
+  margin-top:10px;
+  width:100%;
+  margin-bottom:25px;
+  padding:10px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.card ul{
+  position:relative;
+  width:100%;
+  list-style:none;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: row;
+  padding:7px 0;
+  margin-bottom:20px;
+  flex-wrap: wrap;
+  z-index:10;
+}
+.card ul li {
+  position:relative;
+  padding:0 2px;
+  width:90px;
+  font-size:17px;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card ul li span{
+  margin:0 2px;
+  position:relative;
+  height:40px;
+  line-height:40px;
+  text-align: center;
+  overflow: hidden;
+}
+.card ul li span .star{
+  position:relative;
+  top:0%;
+  left:0%;
+  height:40px;
+  line-height:40px;
+  text-align: center;
+  transition:0.35s;
+  opacity:1;
+}
+.card ul li span .label{
+  position:absolute;
+  top:100%;
+  left:50%;
+  transform:translate(-50%,0);
+  height:40px;
+  line-height:40px;
+  text-align: center;
+  transition:0.35s;
+  opacity:0;
+}
+.card ul li span.active .star{
+  top:-100%;
+  opacity:0;
+}
+.card ul li span.active .label{
+  opacity:1;
+  transform:translate(-50%,-100%);
+}
+
+.card .details{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 10px;
+}
+.card .details .name{
+  width:calc(100% - 100px);
+}
+.card .details .date{
+  width:100px;
+}
+.card .details .name,
+.card .details .date{
+  display: flex;
+  justify-content:flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding:10px;
+  z-index:10;
+}
+.card .details div{
+  letter-spacing:1px;
+}
+.card .details div span{
+  margin-bottom:8px;
+  opacity:0.7;
+}
+.card .date .my{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  overflow-y: hidden;
+}
+.card .date .my #mm_set,.card .date .my #yy_set{
+  line-height:40px;
+  position:relative;
+}
+.card .date .my #mm_set{
+  margin-right:3px;
+}
+.card .date .my #yy_set{
+  margin-left:3px;
+}
+.card .date .my #mm_set .yy,.card .date .my #yy_set .yy{
+  position: relative;
+  transition:0.3s;
+  height:40px;
+  line-height:40px;
+  text-align:center;
+  transform:translateY(100%);
+}
+.card .date .my #yy_set .yy{
+  margin-left:10px;
+}
+.card .date .my #mm_set .mm,.card .date .my #yy_set .mm{
+  position: absolute;
+  top:0%;
+  left:0%;
+  width:100%;
+  height:100%;
+  line-height:40px;
+  text-align:center;
+  transition:0.3s;
+}
+.card .date .my #mm_set.active .mm{
+  top:-100%;
+}
+.card .date .my #yy_set.active .mm{
+  top:-100%;
+}
+.card .date .my #mm_set.active .yy{
+  transform:translateY(0%);
+}
+.card .date .my #yy_set.active .yy{
+  transform:translateY(0%);
+}
+.card .full label{
+  margin-left:5px;
+}
+.card .back1{
+  width:100%;
+  height:100%;
+  border-radius:20px;
+  background-color:white;
+  position:absolute;
+  transform:rotateY(-180deg);
+  transition:0.5s;
+  opacity:0;
+  padding:10px;
+  background-image:linear-gradient(rgba(8, 91, 192, 0.rgba(165, 139, 7, 0.7).7)), url(ai2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card .back1 img{
+  position: absolute;
+  bottom:15px;
+  left:15px;
+}
+.card .back1 p{
+  position:absolute;
+  right:15px;
+  top:50%;
+  transform:translateY(-50%);
+  padding:7px;
+  letter-spacing:1px;
+  background-color:white;
+  border-radius:5px;
+}
+.card .back1 p label{
+  margin: 0 10px;
+}
+.card.active{
+  transform:translateY(-50px) rotateY(180deg);
+}
+.card.active .back1{
+  opacity:1;
+}
+.card.active .card1{
+  opacity:0;
+}
+form{
+  padding:10px;
+  width:100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+form input,form select{
+  padding:8px;
+  margin:8px;
+  outline:none;
+  border:none;
+  background:none;
+  transition:0.4s;
+  font-size:17px;
+  letter-spacing:1px;
+  border:2px solid grey;
+  border-radius:10px;
+}
+form input:focus{
+  border:2px solid deepskyblue;
+  box-shadow:0 0 8px rgb(0,0,0,0.4);
+  transform:scale(1.01);
+}
+form input::placeholder{
+  color:black;
+}
+form input[type="submit"]{
+  margin:12px;
+  background-color:deepskyblue;
+  font-weight:bold;
+  letter-spacing:2px;
+  outline:none;
+  border:none;
+  box-shadow:0 0 8px rgb(0,0,0,0.4);
+  cursor:pointer;
+}
+#pointer{
+  position:absolute;
+  z-index:5;
+  opacity:0;
+  border:2px solid white;
+  box-shadow:0 0 5px rgb(255,255,255,0.6);
+  border-radius:8px;
+  transition:0.3s;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+}
+@media (max-width:450px){
+  .main{
+     width:100vw;
+  }
+}
+

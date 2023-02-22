@@ -1,0 +1,152 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'popins', sans-serif;
+  box-sizing: border-box;
+}
+#icon{
+  width: 20px;
+  height: 5px;
+}
+body{
+  min-height: 100vh;
+    width: 100%;
+    background:url(3357684.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+  width: 400px;
+  padding: 25px 35px;
+  position: absolute;
+  border: 3px solid rgb(6, 155, 63);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background:linear-gradient(rgba(84, 197, 228, 0.5),#5b038e),url(nft.jpg);
+    background-size: cover;
+    background-position: center;
+  border-radius: 10px;
+}
+#img1 {
+  width: 60px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 10px;
+  top: 80%;
+  transition: transform .2s; /* Animation */
+}
+.img1 :hover{
+  
+  transform: scale(1.5);
+ 
+}
+.container p{
+  font-size: 25px;
+  font-weight: 600;
+ color: rgb(254, 254, 254);
+  text-align: center;
+  margin-bottom: 8px;
+  font-family: 'Josefin Sans', sans-serif;
+  text-shadow: #0f7a78;
+
+}
+.container h1{
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: rgb(250, 251, 251);
+  font-family: 'Josefin Sans', sans-serif;
+}
+.container  h1 a{
+  font-size: 15px;
+  font-weight: 600;
+ color: rgb(254, 254, 254);
+  text-align: center;
+  margin-bottom: 8px;
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: none;
+}
+
+.container input{
+  font-size: 20px;
+  width: 100%;
+  height: 50px;
+  border: 3px solid #494e;
+  outline: 0;
+  border-radius: 5px;
+  padding:  10px;
+  margin: 10px 0 20px;
+  color: rgb(8, 57, 69);
+  font-family: 'Josefin Sans', sans-serif;
+font-family: 'Space Grotesk', sans-serif;
+}
+.container button{
+  width: 100%;
+  height: 50px;
+  
+  border: 0;
+  font-size: 30px;
+  background: #494e;
+  color: #fff;
+  
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  cursor: pointer;
+  margin: 20 0;
+
+  
+}
+
+#imgBox{
+  
+  width: 200px;
+  border-radius: 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s;
+}
+#imgBox img{
+  width: 100%;
+  padding: 10px;
+ 
+}
+#imgBox.show-img{
+  margin: 10px auto;
+  max-height: 300px;
+  border: 3px solid  #494e;
+  background-color: #f8fbfa;
+}
+.error{
+animation: shake 0.1s linear 10;
+}
+@keyframes shake {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(-2);
+  }
+  50% {
+    transform: translate(0);
+  }
+  75% {
+    transform: translate(2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+  
+
+  
+}
+@media screen and (max-width:600px){
+  
+}

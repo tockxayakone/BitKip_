@@ -1,0 +1,82 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.hero{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #03a961, #049fa1);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  width: 400px;
+  background: #0691b4;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  color: #333;
+  padding: 40px 40px 20px 40px;
+  margin: 0 auto; /* add this line to center the card horizontally */
+}
+
+.card h1 { 
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border: 4px solid transparent;
+  background-image: linear-gradient(to right, #04cb75, #0470b3, #1bca87);
+  
+}
+
+
+
+label {
+  display: block;
+  width: 200px;
+  background:#04cb75;
+  color: #eef5f7;
+  padding: 12px;
+  margin: 10px auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input{
+  display: none;
+}
+
+.card p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card span {
+  font-weight: 500;
+  color: #000;
+  margin-right: 10px;
+}
+
+/* add this line to center the card vertically */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

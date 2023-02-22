@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Lao:wght@100;400&family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+  <title>popup</title>
+</head>
+<body>
+ <div class="container">
+  <button type="submit" class="btn" onclick="openPopup()">Buy Now</button>
+  <div class="popup" id="popup">
+    <img src="dall.png" alt="#">
+    <h2>ຂໍຂອບໃຈ!</h2>
+    <p>ລາຍ​ລະ​ອຽດຂໍ້ມູນ​ຂອງ​ທ່ານ​ໄດ້​ຖືກ​ສົ່ງ​ສໍາ​ເລັດ​​!<br>[ກົດ OK ເພຶ່ອກັບໄປໜ້າລັກ]</p>
+    <button onclick="closePopup()">Ok</button>
+  </div>
+</div>
+
+<script>
+let popup = document.getElementById("popup");
+function openPopup(){
+  popup.classList.add("open-popup")
+}
+function closePopup(){
+  popup.classList.remove("open-popup")
+}
+
+</script>
+</body>
+</html>

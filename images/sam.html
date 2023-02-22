@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="sam.css">
+  <link rel="stylesheet" href="sam.js">
+
+  <head>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border: 1px solid black;
+        width: 400px;
+        margin: 20px auto;
+      }
+      label, input {
+        margin-bottom: 10px;
+        width: 100%;
+      }
+      button {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: green;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #invoice {
+        border: 1px solid black;
+        width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="invoice-form">
+      <label for="customer-name">Customer Name:</label>
+      <input type="text" id="customer-name" name="customer-name">
+      
+      <label for="item-name">Item Name:</label>
+      <input type="text" id="item-name" name="item-name">
+      
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity">
+      
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price">
+      
+      <button type="submit">Generate Invoice</button>
+    </form>
+    
+    <div id="invoice">
+      <h2>Invoice</h2>
+      <p>Customer Name: <span id="invoice-customer-name"></span></p>
+      <p>Item Name: <span id="invoice-item-name"></span></p>
+      <p>Quantity: <span id="invoice-quantity"></span></p>
+      <p>Price: <span id="invoice-price"></span></p>
+      <p>Total: <span id="invoice-total"></span></p>
+    </div>
+    
+    <script>
+      const form = document.querySelector('#invoice-form');
+      const invoice = document.querySelector('#invoice');
+      const invoiceCustomerName = document.querySelector('#invoice-customer-name');
+      const invoiceItemName = document.querySelector('#invoice-item-name');
+      const invoiceQuantity = document.querySelector('#invoice-quantity');
+      const invoicePrice = document.querySelector('#invoice-price');
+      const invoiceTotal = document.querySelector('#invoice-total');
+      
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const customerName = form.elements['customer-name'].value;
+        const itemName = form.elements['item-name'].value;
+        const quantity = form.elements['quantity'].value; 
