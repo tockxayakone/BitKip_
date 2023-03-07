@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+   
 }
 
 
@@ -46,14 +47,25 @@
     color: rgb(255, 255, 255);
     padding: 180px; 
 }
+.auto-input{
+    color: #07df68;
+    font-family: 'Noto Serif Lao', serif;
+    font-family: 'Source Code Pro', monospace;
+
+   
+   
+    
+}
 .banner-text h1{
-    font-size: 130px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 100px;
+    
     
 }
 .banner-text p{
-    font-size: 20px;
+    font-size: 30px;
     font-style: italic;
+    font-family: 'Source Code Pro', monospace;
+
 }
 .banner-btn{
     margin: 70px auto 0;
@@ -154,18 +166,21 @@
     box-shadow: 0px 0px 10px 5px rgba(2, 205, 131, 0.5);
   }
   
-  #menubtn img :hover {
-    
+  
+  @media only screen and (max-width: 414px) {
+    .banner-text h1 {
+      font-size: 24px;
+    }
+    .banner-text p {
+      font-size: 16px;
+      max-width: 300px;
+    }
   }
-@media screen and (max-width: 770px){
-    .banner-text h1{
-        font-size: 44px;
-    }
-    .banner-btn a{
-        display: block;
-        margin: 20px auto;
-    }
-}
+  
+  
+
+
+
 /*--feattures--*/
 #feattures{
     width: 100%;
@@ -336,6 +351,9 @@
    
     }
  }
+
+
+ 
  /*-----tesimonial----*/
 
  #tesimonial{
@@ -553,5 +571,6 @@
         top: 25%;
     }
  }
+
 
 
